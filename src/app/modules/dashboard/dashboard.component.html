@@ -13,13 +13,18 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav>
-
+  <mat-sidenav mode="side" opened>
+    <button mat-button class="menu-button">
+      <mat-icon>home</mat-icon>
+        <span> Home </span>
+    </button>
   </mat-sidenav>
-  <mat-drawer-container>
-      <div class="content">
-          Main content
-      </div>
-  </mat-drawer-container>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z4"  >
+      <router-outlet></router-outlet>
+  </div>
+  </mat-sidenav-content>
+
+
 </mat-sidenav-container>
 

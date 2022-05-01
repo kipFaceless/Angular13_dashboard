@@ -1,8 +1,4 @@
-body{
-  margin: 0!important;
-}
-
-.example-spacer {
+/*.example-spacer {
   flex: 1 1 auto;
 }
 .example-container {
@@ -10,10 +6,37 @@ body{
   height: 200px;
   margin: 10px;
   border: 1px solid #555;
-}
+}  */
 
 
 mat-toolbar{
-  background: #004a9f;
+
+
+}
+
+mat-sidenav{
+  margin: 16px;
+  width: 200px;
+  border-right: none;
+  background : #003b5d;
   color : white;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+
+}
+
+.content{
+  height: calc(100vh - 98px);
+  margin: 16px;
+  margin-left: 32px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items : center;
+  color : lightgray;
+  border-radius : 10px
+}
+mat-sidenav-container{
+  height: calc(100vh - 65px);
 }
