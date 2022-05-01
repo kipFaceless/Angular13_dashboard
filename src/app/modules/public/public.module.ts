@@ -13,7 +13,8 @@ const routes: Routes = [
 ]
 @NgModule({
   declarations: [
-    HomepageComponent
+    HomepageComponent,
+    LoginComponent
   ],
   imports: [
 
