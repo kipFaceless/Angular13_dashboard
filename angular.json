@@ -107,6 +107,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "adminDashboard:build:production",
+            "firebaseProject": "angular-dashboard-6bf33",
+            "firebaseHostingSite": "angular-dashboard-6bf33"
+          }
         }
       }
     }

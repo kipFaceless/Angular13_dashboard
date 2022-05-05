@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-dashboard-6bf33": {
+      "hosting": {
+        "adminDashboard": [
+          "angular-dashboard-6bf33"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-dashboard-6bf33"
+  }
+}
