@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AuthenticationService } from './../../../../services/authentication.service';
 
 
 @Component({
@@ -8,8 +9,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-valor : number = 0;
-  constructor() { }
+  user$ = this.authService.currentUser$
+  valor : number = 0;
+  constructor(public authService : AuthenticationService) { }
 
   ngOnInit(): void {
   }
