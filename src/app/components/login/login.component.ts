@@ -1,6 +1,6 @@
 
 import { Component, Input, OnInit,  NgModule  } from '@angular/core';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators  } from '@angular/forms';
 
 
 
@@ -13,8 +13,8 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule  } from '@angu
 export class LoginComponent implements OnInit {
 
   loginForm = new FormGroup({
-    email : new FormControl(''),
-    password : new FormControl(''),
+    email : new FormControl('', [Validators.required, Validators.email]),
+    password : new FormControl('', [Validators.required]),
   })
 
   @Input()
@@ -23,5 +23,16 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
+
+  get email () {
+    return this.loginForm.get('email');
+  }
+
+  get password () {
+    return this.loginForm.get('password');
+  }
+
 
 }
