@@ -1,2 +1,28 @@
-<p>login works! {{valor}} </p>
+<mat-toolbar color="primary">
+  Sign up flow with Firebase
+    <button mat-button >
+       <mat-icon >login</mat-icon>
+       Login
+    </button>
+
+
+</mat-toolbar>
+
+<form [formGroup]="loginForm">
+  <mat-form-field  >
+    <input  matInput  placeholder="Email address" formControlName="email" />
+  </mat-form-field>
+  <mat-form-field  >
+    <input  matInput  placeholder="Password" formControlName="password" type="password"/>
+  </mat-form-field>
+
+</form>
+
+
+
+
+
+
+
+<!--<p>login works! {{valor}} </p> -->
 
