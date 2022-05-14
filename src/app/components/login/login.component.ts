@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
     })
   }
   signUp(){
-    this.router.navigate(['/signup-page'])
+    this.router.navigate(['/sign-up'])
   }
 
   get email() {

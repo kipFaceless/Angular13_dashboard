@@ -6,6 +6,8 @@ import { LoginComponent } from './../../components/login/login.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule, } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { SignUpComponent } from './../../components/sign-up/sign-up.component'
 //import {AppModule} from '../../app.module'
 
 
@@ -15,17 +17,25 @@ import {MatInputModule} from '@angular/material/input';
 const routes: Routes = [
     {
       path:"",
-      component : LoginComponent
+      component : LoginComponent,
+
+    },
+    {
+      path:"sign-up",
+      component : SignUpComponent,
+
     }
 ]
 @NgModule({
   declarations: [
     HomepageComponent,
     LoginComponent,
+    SignUpComponent,
 
 
   ],
   imports: [
+
 
     MatToolbarModule,
     MatInputModule,

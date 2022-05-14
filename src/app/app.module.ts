@@ -20,11 +20,14 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+
 
 
 
@@ -39,7 +42,7 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule,
     MatDialogModule,
     MatInputModule,
-
+    MatMenuModule,
   BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

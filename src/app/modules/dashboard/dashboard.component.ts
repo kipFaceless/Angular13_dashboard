@@ -1,6 +1,8 @@
 import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav} from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout'; // To toggle sidenav
+import { AuthenticationService } from './../../services/authentication.service';
+import { MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,11 +10,14 @@ import { BreakpointObserver } from '@angular/cdk/layout'; // To toggle sidenav
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent  {
+  trigger :any
+ // @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger ;
 
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav; // For sidenav hide
+  user$ = this.authService.currentUser$
 
-  constructor(private observer: BreakpointObserver, private cdr : ChangeDetectorRef) { }
+  constructor(private observer: BreakpointObserver, private cdr : ChangeDetectorRef, public authService : AuthenticationService) { }
     //Logic for sideNav
     ngAfterViewInit() {
       this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
@@ -28,6 +33,10 @@ export class DashboardComponent  {
       }
 
       );
+    }
+
+    logout(){
+      this.authService.logout()
     }
 
  /* ngOnInit(): void {
